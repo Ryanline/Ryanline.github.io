@@ -437,7 +437,7 @@ p{ line-height: 1.6; color: var(--muted); }
     padding: calc(var(--navh) + 1.25rem) 1.25rem 2.5rem;
     background-size: cover;
     background-attachment: scroll;
-    background-position: right 200%;
+    background-position: calc(100% + 49vw) center;
   }
   .hero .wrap{
     max-width: 92vw;
