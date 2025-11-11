@@ -433,14 +433,12 @@ p{ line-height: 1.6; color: var(--muted); }
 @media (max-width: 640px){
   /* make the hero taller and stack content nicely */
   .hero{
-    /* let content breathe and push image down a bit */
     min-height: 95svh;
-    align-items: flex-start;                 /* text near top */
+    align-items: flex-start;
     padding: calc(var(--navh) + 1.25rem) 1.25rem 2.5rem;
-
-    /* shift the crop so your body sits *below* the text */
-    background-position: center 65%;         /* try 60–75% to taste */
+    background-position: right center 65%;
     background-size: cover;
+    background-attachment: scroll;
   }
 
   /* center the text block and keep it narrow */
