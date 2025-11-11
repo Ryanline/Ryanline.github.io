@@ -431,30 +431,27 @@ p{ line-height: 1.6; color: var(--muted); }
   .hero{ min-height:70vh; }
 }
 @media (max-width: 640px){
-  /* make the hero taller and stack content nicely */
   .hero{
-    min-height: 95svh;
+    min-height: 100svh;
     align-items: flex-start;
     padding: calc(var(--navh) + 1.25rem) 1.25rem 2.5rem;
-    background-position: right center 65%;
     background-size: cover;
     background-attachment: scroll;
+    background-position: right 200%;
   }
-
-  /* center the text block and keep it narrow */
   .hero .wrap{
-    max-width: 90vw;
-    margin: 0 auto;                          /* center horizontally */
+    max-width: 92vw;
+    margin: 0 auto;
     text-align: center;
   }
 
-  /* comfortable mobile type sizes */
+  /* Comfortable mobile type */
   .hero h1{
-    font-size: clamp(2rem, 9vw, 2.8rem);
+    font-size: clamp(2.1rem, 8.2vw, 3rem);
   }
   .tagline{
-    font-size: clamp(1.05rem, 4vw, 1.25rem);
-    margin-left: 0;                           /* no tiny offset on mobile */
+    font-size: clamp(1.05rem, 4.2vw, 1.3rem);
+    margin-left: 0;
   }
 }
 
