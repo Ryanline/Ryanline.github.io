@@ -1,48 +1,294 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ryan Brooks</title>
-    <style>
-      body {
-        font-family: Arial, sans-serif;
-        color: #0a0a0a;
-        background-color: #ffffff;
-        text-align: center;
-        margin: 0;
-        padding: 100px 20px;
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Ryan Brooks</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/png" href="images/RYBRfavicon.png">
+  <meta name="color-scheme" content="light dark">
+</head>
+<body>
+
+  <!-- TOP NAV BAR -->
+<nav class="topnav" aria-label="Primary">
+  <div class="nav-wrap center-nav">
+    <div class="logo">
+      <img src="images/RYBRlogo.png" alt="RYBR logo">
+    </div>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+  <!-- HERO -->
+  <header id="home" class="section hero">
+    <div class="overlay"></div>
+    <div class="wrap">
+      <h1>Hi, I'm Ryan Brooks</h1>
+      <p class="tagline">Software Engineer, Full-Stack Developer</p>
+    </div>
+  </header>
+
+  <!-- ABOUT ME -->
+  <section id="about" class="section light">
+    <div class="wrap">
+      <h2>About Me</h2>
+      <p>
+        I am a software engineer and full-stack developer currently pursuing my M.S. in Computer Science at George Mason University (graduating summer 2026). I am primarily interested in modular software architecture following the theory of those such as Babara Liskov, Joshua Bloch, and Robert Martin, as well as the topics of artificial intelligence and machine learning. 
+      </p>
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section id="education" class="section edu">
+    <div class="overlay"></div>
+    <div class="wrap">
+      <h2>Education</h2>
+      <ul class="cards">
+        <li>
+          <a class="card-link" href="https://catalog.gmu.edu/colleges-schools/engineering-computing/school-computing/computer-science/computer-science-ms/" target="_blank" rel="noopener">
+            <div class="card">
+              <h3>MS Computer Science</h3>
+              <p>Prepares for practice and research in AI, software, systems, and theory through fundamental and advanced graduate coursework.</p>
+              <small><em>2026 • George Mason University</em></small>
+            </div>
+          </a>
+        </li>
+
+        <li>
+          <a class="card-link" href="https://catalog.gmu.edu/colleges-schools/engineering-computing/school-computing/computer-science/computing-foundations-graduate-certificate/" target="_blank" rel="noopener">
+            <div class="card">
+              <h3>Computing Foundations Graduate Certificate</h3>
+              <p>Covers software development, systems, design, and mathematics to build a foundation for advanced graduate-level study.</p>
+              <small><em>2025 • George Mason University</em></small>
+            </div>
+          </a>
+        </li>
+
+        <li>
+          <a class="card-link" href="https://catalog.gmu.edu/colleges-schools/humanities-social-sciences/global-affairs/global-affairs-ba/" target="_blank" rel="noopener">
+            <div class="card">
+              <h3>BA Global Affairs</h3>
+              <p>Explores the economic, cultural, and political systems and challenges that shape our increasingly globalized world.</p>
+              <small><em>2019 • George Mason University</em></small>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="section light projects">
+    <div class="wrap">
+      <h2>Projects</h2>
+      <ul class="proj-grid">
+        <li>
+          <a class="proj-link" href="https://github.com/Ryanline/bayesian-network-constraint-satisfaction-problem" target="_blank" rel="noopener">
+            <article class="proj-card">
+              <div class="thumb" style="background-image:url('images/project1.png')"></div>
+              <div class="proj-body">
+                <h3>Bayesian Net CSP</h3>
+                <p>Solves map-coloring dilemma with CSP, AC-3 algorithm, and Bayesian inference.</p>
+              </div>
+            </article>
+          </a>
+        </li>
+        <li>
+          <a class="proj-link" href="https://github.com/Ryanline/minimax-a-star-algorithm-implementation" target="_blank" rel="noopener">
+            <article class="proj-card">
+              <div class="thumb" style="background-image:url('images/project2.png')"></div>
+              <div class="proj-body">
+                <h3>Minimax A* Algorithm</h3>
+                <p>Minimax, A*, and hybrid A*/Reverse-A* algorithm pathfinding on digraphs.</p>
+              </div>
+            </article>
+          </a>
+        </li>
+        <li>
+          <a class="proj-link" href="https://github.com/Ryanline/junit-boundedqueue-testing" target="_blank" rel="noopener">
+            <article class="proj-card">
+              <div class="thumb" style="background-image:url('images/project3.png')"></div>
+              <div class="proj-body">
+                <h3>JUnit Bug Testing Project</h3>
+                <p>JUnit 4 tests with repOk() rep-invariant for BoundedQueue and buggy variants.</p>
+              </div>
+            </article>
+          </a>
+        </li>
+        <li>
+          <a class="proj-link" href="https://github.com/Ryanline/smpcache-research" target="_blank" rel="noopener">
+            <article class="proj-card">
+              <div class="thumb" style="background-image:url('images/project4.png')"></div>
+              <div class="proj-body">
+                <h3>SMPCache Virtual Config Research</h3>
+                <p>Analyzes cache performance across symmetric multiprocessor configs. 
+</p>
+              </div>
+            </article>
+          </a>
+        </li>
+        <li>
+          <a class="proj-link" href="https://github.com/Ryanline/avl-tree-ip-address-book" target="_blank" rel="noopener">
+            <article class="proj-card">
+              <div class="thumb" style="background-image:url('images/project5.png')"></div>
+              <div class="proj-body">
+                <h3>AVL Tree IPv4 Implementation</h3>
+                <p>Implements AVL-based IPv4 address book in C with validation and rebalancing.</p>
+              </div>
+            </article>
+          </a>
+        </li>
+        <li>
+          <a class="proj-link" href="https://github.com/Ryanline/Whimble-Repo" target="_blank" rel="noopener">
+            <article class="proj-card">
+              <div class="thumb" style="background-image:url('images/project6.png')"></div>
+              <div class="proj-body">
+                <h3>Whimble - 2D Platformer Demo</h3>
+                <p>2D platformer with physics, multiple enemy types, and multiplayer collision interactions.</p>
+              </div>
+            </article>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="section skills">
+    <div class="bg-blur"></div>
+    <div class="overlay dark"></div>
+    <div class="wrap">
+      <h2>Skills</h2>
+      <ul class="chips">
+        <li>Python</li>
+        <li>Java</li>
+        <li>JUnit</li>
+        <li>C</li>
+        <li>CSS</li>
+        <li>HTML</li>
+        <li>JavaScript</li>
+        <li>SMPCache</li>
+        <li>GDScript</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section contact-section light">
+    <div class="wrap">
+      <h2>Contact</h2>
+      <form id="contactForm" class="contact-form">
+        <div class="row">
+          <label>Name
+            <input type="text" name="name" required />
+          </label>
+        </div>
+        <div class="row">
+          <label>Email
+            <input type="email" name="email" required />
+          </label>
+        </div>
+        <div class="row">
+          <label>Subject
+            <input type="text" name="subject" placeholder="(optional)" />
+          </label>
+        </div>
+        <div class="row">
+          <label>Message
+            <textarea name="message" rows="6" required></textarea>
+          </label>
+        </div>
+        <button type="submit" class="btn-primary">Send Email</button>
+        <p class="alt">Prefer your mail app? <a href="mailto:brooksryan63@gmail.com">brooksryan63@gmail.com</a></p>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="site-footer" class="footer">
+    <div class="wrap">
+      <ul class="contact">
+        <li><a href="https://github.com/Ryanline" target="_blank" rel="noopener">GitHub</a></li>
+        <li><a href="https://www.linkedin.com/in/ryanline/" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><a href="mailto:brooksryan63@gmail.com">Email</a></li>
+      </ul>
+      <small>© <span id="year"></span> Ryan Brooks</small>
+    </div>
+
+    <script>
+      // --- Footer year ---
+      document.getElementById('year').textContent = new Date().getFullYear();
+
+      // --- Contact form (mailto ---
+      const cf = document.getElementById('contactForm');
+      if (cf) {
+        cf.addEventListener('submit', (e) => {
+          e.preventDefault();
+          const name = cf.elements.name.value.trim();
+          const email = cf.elements.email.value.trim();
+          const subject = cf.elements.subject.value.trim() || `Message from ${name}`;
+          const message = cf.elements.message.value.trim();
+
+          const mailto = new URL('mailto:brooksryan63@gmail.com');
+          mailto.searchParams.set('subject', subject);
+          mailto.searchParams.set('body', `From: ${name} <${email}>\n\n${message}`);
+          window.location.href = mailto.toString();
+        });
       }
-      h1 {
-        color: #1a2e8e; /* royal blue */
-        font-size: 2.5rem;
+
+      // --- Active nav highlighting ---
+      const links = [...document.querySelectorAll('.nav-links a')];
+      const byId  = Object.fromEntries(links.map(a => [a.hash.slice(1), a]));
+      const setActive = (id) => links.forEach(a => a.classList.toggle('active', a === byId[id]));
+      setActive('home');
+
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) setActive(entry.target.id);
+        });
+      }, {
+        root: null,
+        threshold: 0.55,
+        rootMargin: `-${getComputedStyle(document.documentElement).getPropertyValue('--navh') || '64px'} 0px -35% 0px`
+      });
+
+      document.querySelectorAll('#home, #about, #education, #projects, #skills, #contact')
+        .forEach(sec => io.observe(sec));
+
+      // --- Slower smooth scrolling ---
+      const NAV_OFFSET = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--navh')) || 64;
+      function ease(t){ return t < 0.5 ? 2*t*t : 1 - Math.pow(-2*t+2, 2)/2; }
+      function smoothScrollTo(targetY, duration = 900){
+        const startY = window.pageYOffset;
+        const delta  = targetY - startY;
+        const start  = performance.now();
+        function step(now){
+          const t = Math.min(1, (now - start) / duration);
+          window.scrollTo(0, startY + delta * ease(t));
+          if (t < 1) requestAnimationFrame(step);
+        }
+        requestAnimationFrame(step);
       }
-      p {
-        font-size: 1.1rem;
-        color: #333;
-        max-width: 600px;
-        margin: 0 auto 40px;
-      }
-      a.button {
-        display: inline-block;
-        background-color: #1a2e8e;
-        color: white;
-        text-decoration: none;
-        padding: 12px 24px;
-        border-radius: 6px;
-        font-weight: 600;
-      }
-      a.button:hover {
-        background-color: #0d1c61;
-      }
-    </style>
-  </head>
-  <body>
-    <h1>Hi, I'm Ryan Brooks</h1>
-    <p>
-      I'm a computer science student and software engineer.  
-      Welcome to my personal site!
-    </p>
-    <a href="https://github.com/Ryanline" class="button">My GitHub</a>
-  </body>
+      document.querySelectorAll('a[href^="#"]').forEach(a => {
+        a.addEventListener('click', e => {
+          const id = a.getAttribute('href');
+          if (!id || id === '#') return;
+          const target = document.querySelector(id);
+          if (!target) return;
+          e.preventDefault();
+          const y = target.getBoundingClientRect().top + window.pageYOffset - NAV_OFFSET;
+          smoothScrollTo(y, 900);
+        });
+      });
+    </script>
+  </footer>
+</body>
 </html>
