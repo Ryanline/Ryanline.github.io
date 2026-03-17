@@ -318,6 +318,13 @@ select {
   aspect-ratio: 1.1;
   border-bottom: 1px solid rgba(17, 17, 17, 0.06);
   background: linear-gradient(135deg, #f6f3ee 0%, #eee5da 100%);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.project-image--filled {
+  background-color: #ece4d8;
 }
 
 .project-body {

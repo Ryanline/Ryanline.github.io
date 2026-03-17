@@ -5,6 +5,7 @@ export type Technology = {
 
 export type Project = {
   title: string;
+  splashArt?: string;
   summary: string;
   githubUrl: string;
   liveUrl?: string;
@@ -20,6 +21,7 @@ export const socialLinks = [
 export const projects: Project[] = [
   {
     title: 'Rush: Speed Dating',
+    splashArt: 'images/splash-art/rush-splash.png',
     summary:
       'Fully deployed live speed dating full-stack application that pairs users into timed chatrooms.',
     githubUrl: 'https://github.com/Ryanline/rush',
@@ -39,6 +41,7 @@ export const projects: Project[] = [
   },
   {
     title: 'Bayesian Net CSP',
+    splashArt: 'images/splash-art/bayesian-splash.png',
     summary:
       'Implements AC-3 algorithm and a Bayesian Network to solve a map-coloring constraint satisfaction problem.',
     githubUrl: 'https://github.com/Ryanline/bayesian-network-constraint-satisfaction-problem',
@@ -46,6 +49,7 @@ export const projects: Project[] = [
   },
   {
     title: 'Digraph Algorithm Comparison',
+    splashArt: 'images/splash-art/digraph-splash.png',
     summary:
       "Compares A*, Hybrid A*/Reverse A*, and Minimax algorithms' digraph search performances.",
     githubUrl: 'https://github.com/Ryanline/minimax-a-star-algorithm-implementation',
@@ -64,6 +68,7 @@ export const projects: Project[] = [
   },
   {
     title: 'Dungeons and Druddigons',
+    splashArt: 'images/splash-art/dungeons-splash.png',
     summary:
       'Live web app for a Pokemon-themed D&D 5e homebrew. Shows rules, moves, abilities, and more.',
     githubUrl: 'https://github.com/Ryanline/Dungeons-and-Druddigons',
@@ -79,12 +84,14 @@ export const projects: Project[] = [
   },
   {
     title: 'AVL Tree Address Book Engine',
+    splashArt: 'images/splash-art/avl-splash.png',
     summary: 'Implements an IPv4 address book in C using an AVL tree.',
     githubUrl: 'https://github.com/Ryanline/avl-tree-ip-address-book',
     technologies: [{ name: 'C', logo: 'images/logos/c-logo.png' }],
   },
   {
     title: 'BoundedQueue Bug Testing',
+    splashArt: 'images/splash-art/junit-splash.png',
     summary: 'Implements repOk() rep invariant with JUnit 4 testing for BoundedQueue.',
     githubUrl: 'https://github.com/Ryanline/junit-boundedqueue-testing',
     technologies: [
@@ -94,6 +101,7 @@ export const projects: Project[] = [
   },
   {
     title: 'MATLAB Calculus Tool',
+    splashArt: 'images/splash-art/calculus-splash.png',
     summary: 'A simple calculus tool for finding derivatives and integrals.',
     githubUrl: 'https://github.com/Ryanline/calculus-tool',
     technologies: [
@@ -106,6 +114,7 @@ export const projects: Project[] = [
   },
   {
     title: 'SMPCache Research',
+    splashArt: 'images/splash-art/smp-splash.png',
     summary:
       'Analyzes cache memory performance across various simulated symmetric multiprocessor cache system configurations.',
     githubUrl: 'https://github.com/Ryanline/smpcache-research',

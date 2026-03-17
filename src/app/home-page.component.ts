@@ -27,7 +27,12 @@ import { projects } from './app.data';
       <div class="project-grid">
         @for (project of projectList; track project.title) {
           <article class="project-card">
-            <div class="project-image" aria-hidden="true"></div>
+            <div
+              class="project-image"
+              [class.project-image--filled]="!!project.splashArt"
+              [style.background-image]="project.splashArt ? 'url(' + project.splashArt + ')' : null"
+              aria-hidden="true"
+            ></div>
 
             <div class="project-body">
               <h3>{{ project.title }}</h3>
