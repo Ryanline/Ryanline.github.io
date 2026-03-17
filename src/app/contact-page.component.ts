@@ -6,7 +6,7 @@ import { FormsModule } from '@angular/forms';
   standalone: true,
   imports: [FormsModule],
   template: `
-    <section class="page-section">
+    <section class="page-section page-section-plain">
       <div class="page-container contact-layout">
         <div class="section-heading section-heading-tight">
           <h2>Contact</h2>
@@ -34,7 +34,7 @@ import { FormsModule } from '@angular/forms';
               <textarea name="message" rows="8" [(ngModel)]="form.message" required></textarea>
             </label>
 
-            <button class="button button-primary" type="submit">Send Message</button>
+            <button class="button button-dark" type="submit">Send Message</button>
           </form>
         </div>
       </div>

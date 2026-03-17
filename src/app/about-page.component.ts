@@ -4,7 +4,7 @@ import { Component } from '@angular/core';
   selector: 'app-about-page',
   standalone: true,
   template: `
-    <section class="page-section">
+    <section class="page-section page-section-plain">
       <div class="page-container prose-panel">
         <div class="section-heading section-heading-tight">
           <h2>About</h2>

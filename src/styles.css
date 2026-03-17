@@ -285,6 +285,10 @@ select {
   padding-top: 7rem;
 }
 
+.page-section-plain {
+  background: #ffffff;
+}
+
 .page-container,
 .section-heading,
 .project-grid,
@@ -435,7 +439,7 @@ select {
 }
 
 .resume-page-shell {
-  max-width: 48rem;
+  max-width: min(92vw, 86rem);
 }
 
 .resume-heading {
@@ -463,83 +467,10 @@ select {
   text-decoration: underline;
 }
 
-.resume-viewer {
-  border: 1px solid #d0d6de;
-  background: #eef1f4;
-}
-
-.resume-toolbar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
-  padding: 0.7rem 0.9rem;
-  background: #434b57;
-  color: #f3f6f9;
-}
-
-.resume-toolbar-group {
-  display: flex;
-  align-items: center;
-  gap: 0.45rem;
-}
-
-.resume-toolbar-label {
-  font-size: 0.73rem;
-  font-weight: 700;
-  letter-spacing: 0.02em;
-}
-
-.resume-toolbar-zoom {
-  opacity: 0.84;
-}
-
-.resume-toolbar-button,
-.resume-toolbar-link {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 1.85rem;
-  height: 1.85rem;
-  padding: 0;
-  border: 0;
-  background: transparent;
-  color: inherit;
-  text-decoration: none;
-  font-size: 1rem;
-  line-height: 1;
-}
-
-.resume-toolbar-pagebox {
-  min-width: 1.9rem;
-  height: 1.85rem;
-  padding: 0 0.45rem;
-  border-radius: 0.18rem;
-  background: #ffffff;
-  color: #2d3440;
-  font-size: 0.85rem;
-  font-weight: 700;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.resume-toolbar-separator {
-  width: 1px;
-  height: 1.2rem;
-  background: rgba(255, 255, 255, 0.22);
-  margin: 0 0.2rem;
-}
-
-.resume-document-shell {
-  padding: 1.6rem;
-  background: #ececec;
-}
-
 .resume-frame {
   width: 100%;
-  min-height: 66rem;
-  border: 1px solid #d9d9d9;
+  min-height: 88rem;
+  border: 1px solid rgba(17, 17, 17, 0.12);
   background: #fff;
 }
 
@@ -555,6 +486,10 @@ select {
   display: grid;
   gap: 1rem;
   margin-top: 1.2rem;
+}
+
+.contact-form .button {
+  justify-self: start;
 }
 
 .contact-form label {
@@ -723,16 +658,7 @@ select {
     max-width: 100%;
   }
 
-  .resume-toolbar {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .resume-document-shell {
-    padding: 0.75rem;
-  }
-
   .resume-frame {
-    min-height: 32rem;
+    min-height: 42rem;
   }
 }
