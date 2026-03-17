@@ -1,9 +1,11 @@
 import { Component } from '@angular/core';
+import { RouterLink } from '@angular/router';
 import { projects } from './app.data';
 
 @Component({
   selector: 'app-home-page',
   standalone: true,
+  imports: [RouterLink],
   template: `
     <section class="hero">
       <div class="hero-overlay"></div>
@@ -14,7 +16,7 @@ import { projects } from './app.data';
 
         <div class="hero-actions">
           <a class="button button-primary" href="#projects">View Projects</a>
-          <a class="button button-secondary" href="/resume">Resume</a>
+          <a class="button button-secondary" routerLink="/resume">Resume</a>
         </div>
       </div>
     </section>

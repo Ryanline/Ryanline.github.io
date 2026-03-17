@@ -406,7 +406,7 @@ select {
   gap: 0.45rem;
   padding: 0.45rem 0.7rem;
   border-radius: 999px;
-  background: #f6f1eb;
+  background: #f5f5f5;
   color: #5a4738;
   font-size: 0.82rem;
   font-weight: 700;
@@ -449,10 +449,12 @@ select {
 .resume-heading h2 {
   font-size: clamp(2.2rem, 4vw, 3rem);
   letter-spacing: -0.04em;
+  margin-left: 0.08rem;
 }
 
 .resume-download-line {
   margin: 0 0 1rem;
+  padding-left: 0.08rem;
   color: var(--muted);
   font-size: 1.02rem;
 }
@@ -519,7 +521,7 @@ select {
   justify-content: space-between;
   gap: 1rem;
   padding: 1.6rem clamp(1.5rem, 4vw, 2.5rem) 2.2rem;
-  background: transparent;
+  background: #ffffff;
 }
 
 .footer-year {
