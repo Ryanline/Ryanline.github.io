@@ -4,12 +4,26 @@
       <img src="/images/logos/RYBR-light-logo.png" alt="RYBR logo" />
     </a>
 
-    <nav class="site-nav" aria-label="Primary">
+    <button
+      class="menu-toggle"
+      type="button"
+      [attr.aria-expanded]="mobileMenuOpen"
+      aria-controls="site-nav"
+      aria-label="Toggle navigation menu"
+      (click)="toggleMobileMenu()"
+    >
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav id="site-nav" class="site-nav" [class.site-nav--open]="mobileMenuOpen" aria-label="Primary">
       @for (item of navItems; track item.label) {
         <a
           [routerLink]="item.route"
           [fragment]="item.fragment"
           [class.active]="isNavItemActive(item)"
+          (click)="handleNavClick($event, item)"
         >
           {{ item.label }}
         </a>
@@ -22,7 +36,7 @@
   </main>
 
   <footer class="site-footer">
-    <p class="footer-year">© {{ currentYear }} Ryan Brooks</p>
+    <p class="footer-year">&copy; {{ currentYear }} Ryan Brooks</p>
 
     <div class="footer-links">
       @for (link of socialLinks; track link.label) {

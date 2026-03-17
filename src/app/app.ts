@@ -13,10 +13,12 @@ import { socialLinks } from './app.data';
 export class App implements OnInit {
   private readonly router = inject(Router);
   private readonly document = inject(DOCUMENT);
+  private pendingScrollTarget: 'projects' | null = null;
 
   protected readonly currentYear = new Date().getFullYear();
   protected currentPath = '/';
   protected currentHomeSection: 'home' | 'projects' = 'home';
+  protected mobileMenuOpen = false;
 
   protected readonly navItems = [
     { label: 'Home', route: '/', fragment: undefined },
@@ -34,6 +36,15 @@ export class App implements OnInit {
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
         this.syncRouteState();
+        this.mobileMenuOpen = false;
+
+        if (this.pendingScrollTarget === 'projects' && this.currentPath === '/') {
+          setTimeout(() => {
+            this.scrollToProjects();
+            this.pendingScrollTarget = null;
+          }, 0);
+        }
+
         setTimeout(() => this.updateHomeSection(), 0);
       }
     });
@@ -56,10 +67,64 @@ export class App implements OnInit {
     return this.currentPath === item.route;
   }
 
+  protected toggleMobileMenu(): void {
+    this.mobileMenuOpen = !this.mobileMenuOpen;
+  }
+
+  protected closeMobileMenu(): void {
+    this.mobileMenuOpen = false;
+  }
+
+  protected handleNavClick(
+    event: MouseEvent,
+    item: { label: string; route: string; fragment?: string },
+  ): void {
+    this.mobileMenuOpen = false;
+
+    if (item.label === 'Home' && this.currentPath === '/') {
+      event.preventDefault();
+      this.document.defaultView?.scrollTo({ top: 0, behavior: 'smooth' });
+      this.currentHomeSection = 'home';
+      return;
+    }
+
+    if (item.fragment !== 'projects') {
+      return;
+    }
+
+    event.preventDefault();
+
+    if (this.currentPath === '/') {
+      this.scrollToProjects();
+      return;
+    }
+
+    this.pendingScrollTarget = 'projects';
+    void this.router.navigateByUrl('/');
+  }
+
   private syncRouteState(): void {
     const url = this.router.url.split('#')[0] || '/';
     this.currentPath = url;
     this.updateHomeSection();
+  }
+
+  private scrollToProjects(): void {
+    const projectsSection = this.document.getElementById('projects');
+    if (!projectsSection) {
+      return;
+    }
+
+    const activationLine = 180;
+    const scrollTop = this.document.defaultView?.scrollY ?? 0;
+    const targetTop = scrollTop + projectsSection.getBoundingClientRect().top - activationLine;
+
+    this.document.defaultView?.scrollTo({
+      top: Math.max(targetTop, 0),
+      behavior: 'smooth',
+    });
+
+    this.currentHomeSection = 'projects';
   }
 
   private updateHomeSection(): void {
