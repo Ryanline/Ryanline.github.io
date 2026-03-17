@@ -13,12 +13,6 @@ import { FormsModule } from '@angular/forms';
         </div>
 
         <div class="contact-card">
-          <p class="contact-note">
-            Static sites cannot send email on their own. This form opens your mail app right now,
-            and we can later connect it to a service like Formspree, EmailJS, or a serverless
-            function if you want true direct sending.
-          </p>
-
           <form class="contact-form" (ngSubmit)="openMailto()" #contactForm="ngForm">
             <label>
               Name
