@@ -1,14 +1,15 @@
 <div class="page-shell">
   <header class="site-header">
-    <a class="brand" routerLink="/" aria-label="Ryan Brooks home">RB</a>
+    <a class="brand" routerLink="/" aria-label="Ryan Brooks home">
+      <img src="images/RYBRlogo.png" alt="RYBR logo" />
+    </a>
 
     <nav class="site-nav" aria-label="Primary">
       @for (item of navItems; track item.label) {
         <a
           [routerLink]="item.route"
           [fragment]="item.fragment"
-          routerLinkActive="active"
-          [routerLinkActiveOptions]="{ exact: item.route !== '/' || !item.fragment }"
+          [class.active]="isNavItemActive(item)"
         >
           {{ item.label }}
         </a>

@@ -73,7 +73,7 @@ select {
   z-index: 30;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   gap: 1rem;
   padding: 1rem clamp(1.2rem, 3vw, 2.5rem);
   background: rgba(41, 28, 20, 0.34);
@@ -82,24 +82,26 @@ select {
 }
 
 .brand {
+  position: absolute;
+  left: clamp(1.2rem, 3vw, 2.5rem);
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 2.8rem;
+  width: 4.4rem;
   height: 2.8rem;
-  border-radius: 999px;
   text-decoration: none;
-  color: #fff;
-  background: rgba(255, 255, 255, 0.14);
-  border: 1px solid rgba(255, 255, 255, 0.28);
-  font-weight: 800;
-  letter-spacing: 0.08em;
+}
+
+.brand img {
+  width: 100%;
+  height: auto;
 }
 
 .site-nav {
   display: flex;
   align-items: center;
   gap: 1.3rem;
+  margin: 0 auto;
 }
 
 .site-nav a {
@@ -157,7 +159,7 @@ select {
 
 .hero h1 {
   margin: 0;
-  font-size: clamp(3rem, 6vw, 4.6rem);
+  font-size: clamp(2.55rem, 5.1vw, 3.9rem);
   line-height: 1;
   letter-spacing: -0.03em;
   font-weight: 700;
@@ -175,7 +177,12 @@ select {
   text-shadow: 0 2px 14px rgba(0, 0, 0, 0.12);
 }
 
+.hero-subtitle {
+  margin-top: 0.55rem;
+}
+
 .hero-detail {
+  margin-top: 0.1rem;
   color: rgba(255, 255, 255, 0.9);
 }
 
@@ -277,6 +284,7 @@ select {
 
 .projects-section {
   background: #ffffff;
+  scroll-margin-top: 7.75rem;
 }
 
 .project-grid {
@@ -345,7 +353,7 @@ select {
   display: flex;
   flex-wrap: wrap;
   gap: 0.55rem;
-  margin: auto 0 0;
+  margin: 0;
   padding: 0;
   list-style: none;
 }
@@ -530,12 +538,17 @@ select {
   .site-header,
   .site-footer {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
   }
 
   .site-nav {
     flex-wrap: wrap;
+    justify-content: center;
     gap: 0.9rem 1.2rem;
+  }
+
+  .brand {
+    position: static;
   }
 
   .hero {
