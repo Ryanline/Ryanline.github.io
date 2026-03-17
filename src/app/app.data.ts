@@ -57,6 +57,7 @@ export const projects: Project[] = [
   },
   {
     title: 'RyanBrooks.io',
+    splashArt: 'images/splash-art/this-site-splash.png',
     summary: 'Personal portfolio site built with Angular and deployed on GitHub Pages.',
     githubUrl: 'https://github.com/Ryanline/Ryanline.github.io',
     liveUrl: 'https://ryanbrooks.io/',
