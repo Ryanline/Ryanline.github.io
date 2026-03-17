@@ -328,9 +328,12 @@ select {
 
 .project-body h3 {
   margin: 0;
-  font-size: 1.4rem;
-  line-height: 1.1;
+  font-size: 1.2rem;
+  line-height: 1.15;
   letter-spacing: -0.04em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .project-body p,
@@ -347,6 +350,7 @@ select {
   display: flex;
   flex-wrap: wrap;
   gap: 0.8rem;
+  margin-top: 0.1rem;
 }
 
 .tech-list {
@@ -575,5 +579,11 @@ select {
 
   .site-nav a {
     font-size: 0.9rem;
+  }
+
+  .project-body h3 {
+    white-space: normal;
+    overflow: visible;
+    text-overflow: clip;
   }
 }
