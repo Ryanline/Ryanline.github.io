@@ -632,7 +632,7 @@ select {
     padding: 7.4rem 1.35rem 3rem;
     background:
       linear-gradient(180deg, rgba(15, 11, 9, 0.44) 0%, rgba(15, 11, 9, 0.18) 28%, rgba(15, 11, 9, 0.08) 58%, rgba(15, 11, 9, 0.04) 100%),
-      url('/images/backgrounds/hero-mobile-bg.png') center top / cover no-repeat;
+      url('/images/backgrounds/hero-mobile-bg.svg') center top / cover no-repeat;
   }
 
   .hero-copy {
