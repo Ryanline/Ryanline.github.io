@@ -153,8 +153,9 @@ select {
   position: relative;
   z-index: 1;
   max-width: 28rem;
+  margin-left: clamp(8rem, 12vw, 12rem);
   color: #fff;
-  transform: translate(45%, -10%);
+  transform: translateY(-10%);
   animation: rise-in 650ms ease-out both;
 }
 
@@ -563,6 +564,7 @@ select {
 
   .hero-copy {
     max-width: 100%;
+    margin-left: 0;
     transform: none;
   }
 
