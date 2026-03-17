@@ -289,7 +289,8 @@ select {
 .section-heading,
 .project-grid,
 .resume-layout,
-.contact-layout {
+.contact-layout,
+.resume-page-shell {
   max-width: 72rem;
   margin: 0 auto;
 }
@@ -413,17 +414,6 @@ select {
   object-fit: contain;
 }
 
-.resume-layout {
-  display: grid;
-  grid-template-columns: minmax(0, 1.6fr) minmax(16rem, 0.7fr);
-  gap: 2rem;
-  align-items: start;
-}
-
-.resume-layout-single {
-  grid-template-columns: minmax(0, 1.6fr) minmax(18rem, 0.6fr);
-}
-
 .resume-paper,
 .resume-note,
 .prose-card,
@@ -434,53 +424,123 @@ select {
   box-shadow: var(--shadow);
 }
 
-.resume-paper {
-  padding: clamp(1.4rem, 3vw, 2.4rem);
-}
-
-.resume-topline {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 1rem;
-  padding-bottom: 1rem;
-  border-bottom: 1px solid rgba(17, 17, 17, 0.12);
-}
-
-.resume-topline h3 {
-  margin: 0;
-  font-size: 1.8rem;
-  letter-spacing: -0.04em;
-}
-
-.resume-topline p,
-.resume-contact {
-  margin: 0;
-  color: var(--muted);
-}
-
-.resume-frame {
-  width: 100%;
-  min-height: 70rem;
-  margin-top: 1.2rem;
-  border: 1px solid rgba(17, 17, 17, 0.08);
-  border-radius: 1rem;
-  background: #fff;
-}
-
 .resume-note,
 .contact-card {
   padding: 1.4rem;
 }
 
-.resume-note {
-  position: sticky;
-  top: 6rem;
-}
-
 .prose-panel,
 .contact-layout {
   max-width: 62rem;
+}
+
+.resume-page-shell {
+  max-width: 48rem;
+}
+
+.resume-heading {
+  margin-bottom: 0.55rem;
+}
+
+.resume-heading h2 {
+  font-size: clamp(2.2rem, 4vw, 3rem);
+  letter-spacing: -0.04em;
+}
+
+.resume-download-line {
+  margin: 0 0 1rem;
+  color: var(--muted);
+  font-size: 1.02rem;
+}
+
+.resume-download-line a {
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.resume-download-line a:hover,
+.resume-download-line a:focus-visible {
+  text-decoration: underline;
+}
+
+.resume-viewer {
+  border: 1px solid #d0d6de;
+  background: #eef1f4;
+}
+
+.resume-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.7rem 0.9rem;
+  background: #434b57;
+  color: #f3f6f9;
+}
+
+.resume-toolbar-group {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.resume-toolbar-label {
+  font-size: 0.73rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.resume-toolbar-zoom {
+  opacity: 0.84;
+}
+
+.resume-toolbar-button,
+.resume-toolbar-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.85rem;
+  height: 1.85rem;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  text-decoration: none;
+  font-size: 1rem;
+  line-height: 1;
+}
+
+.resume-toolbar-pagebox {
+  min-width: 1.9rem;
+  height: 1.85rem;
+  padding: 0 0.45rem;
+  border-radius: 0.18rem;
+  background: #ffffff;
+  color: #2d3440;
+  font-size: 0.85rem;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.resume-toolbar-separator {
+  width: 1px;
+  height: 1.2rem;
+  background: rgba(255, 255, 255, 0.22);
+  margin: 0 0.2rem;
+}
+
+.resume-document-shell {
+  padding: 1.6rem;
+  background: #ececec;
+}
+
+.resume-frame {
+  width: 100%;
+  min-height: 66rem;
+  border: 1px solid #d9d9d9;
+  background: #fff;
 }
 
 .prose-card {
@@ -557,15 +617,6 @@ select {
 }
 
 @media (max-width: 980px) {
-  .resume-layout,
-  .resume-layout-single {
-    grid-template-columns: 1fr;
-  }
-
-  .resume-note {
-    position: static;
-  }
-
   .project-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -666,5 +717,22 @@ select {
     white-space: normal;
     overflow: visible;
     text-overflow: clip;
+  }
+
+  .resume-page-shell {
+    max-width: 100%;
+  }
+
+  .resume-toolbar {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .resume-document-shell {
+    padding: 0.75rem;
+  }
+
+  .resume-frame {
+    min-height: 32rem;
   }
 }
