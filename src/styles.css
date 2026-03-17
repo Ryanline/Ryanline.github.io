@@ -154,7 +154,7 @@ select {
   z-index: 1;
   max-width: 28rem;
   color: #fff;
-  transform: translate(20%, -10%);
+  transform: translate(45%, -10%);
   animation: rise-in 650ms ease-out both;
 }
 
