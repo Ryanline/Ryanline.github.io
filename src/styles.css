@@ -150,28 +150,33 @@ select {
 .hero-copy {
   position: relative;
   z-index: 1;
-  max-width: 34rem;
+  max-width: 28rem;
   color: #fff;
   animation: rise-in 650ms ease-out both;
 }
 
 .hero h1 {
   margin: 0;
-  font-size: clamp(3.15rem, 7vw, 5.6rem);
-  line-height: 0.95;
-  letter-spacing: -0.05em;
+  font-size: clamp(3rem, 6vw, 4.6rem);
+  line-height: 1;
+  letter-spacing: -0.03em;
+  font-weight: 700;
+  text-shadow: 0 2px 18px rgba(0, 0, 0, 0.14);
 }
 
 .hero-subtitle,
 .hero-detail {
   margin: 0;
   color: rgba(255, 255, 255, 0.95);
-  font-size: clamp(1.5rem, 2.5vw, 2.15rem);
+  font-size: clamp(1.15rem, 2vw, 1.8rem);
   font-style: italic;
+  font-weight: 400;
+  line-height: 1.35;
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.12);
 }
 
 .hero-detail {
-  color: rgba(255, 255, 255, 0.86);
+  color: rgba(255, 255, 255, 0.9);
 }
 
 .hero-actions {
@@ -205,6 +210,10 @@ select {
   height: 1rem;
   object-fit: contain;
   flex: 0 0 auto;
+}
+
+.button-icon-invert {
+  filter: brightness(0) invert(1);
 }
 
 .button:hover,
@@ -532,7 +541,7 @@ select {
   .hero {
     align-items: flex-start;
     padding-top: 8.5rem;
-    background-position: 64% center;
+    background-position: 67% center;
   }
 
   .hero-copy {

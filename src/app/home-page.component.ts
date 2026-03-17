@@ -42,7 +42,12 @@ import { projects } from './app.data';
                 }
 
                 <a class="button button-dark" [href]="project.githubUrl" target="_blank" rel="noopener">
-                  <img class="button-icon" src="images/logos/github-logo.png" alt="" aria-hidden="true" />
+                  <img
+                    class="button-icon button-icon-invert"
+                    src="images/logos/github-logo.png"
+                    alt=""
+                    aria-hidden="true"
+                  />
                   <span>GitHub</span>
                 </a>
               </div>
