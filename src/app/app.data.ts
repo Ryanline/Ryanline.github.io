@@ -23,7 +23,7 @@ export const projects: Project[] = [
     title: 'Rush: Speed Dating',
     splashArt: 'images/splash-art/rush-splash.png',
     summary:
-      'Fully deployed live speed dating full-stack application that pairs users into timed chatrooms.',
+      'Fully-deployed live speed dating full-stack web application that pairs users into timed chatrooms. Includes authentication.',
     githubUrl: 'https://github.com/Ryanline/rush',
     liveUrl: 'https://rush-app-ava.pages.dev/',
     technologies: [
@@ -51,7 +51,7 @@ export const projects: Project[] = [
     title: 'Digraph Algorithm Comparison',
     splashArt: 'images/splash-art/digraph-splash.png',
     summary:
-      "Compares A*, Hybrid A*/Reverse A*, and Minimax algorithms' digraph search performances.",
+      "Implements and compares A*, Hybrid A*/Reverse A*, and Minimax algorithms' digraph search performances.",
     githubUrl: 'https://github.com/Ryanline/minimax-a-star-algorithm-implementation',
     technologies: [{ name: 'Python', logo: 'images/logos/python-logo.png' }],
   },
@@ -86,7 +86,7 @@ export const projects: Project[] = [
   {
     title: 'AVL Tree Address Book Engine',
     splashArt: 'images/splash-art/avl-splash.png',
-    summary: 'Implements an IPv4 address book in C using an AVL tree.',
+    summary: 'Implements an IPv4 address book in C using a self-balancing AVL tree.',
     githubUrl: 'https://github.com/Ryanline/avl-tree-ip-address-book',
     technologies: [{ name: 'C', logo: 'images/logos/c-logo.png' }],
   },
@@ -103,7 +103,7 @@ export const projects: Project[] = [
   {
     title: 'MATLAB Calculus Tool',
     splashArt: 'images/splash-art/calculus-splash.png',
-    summary: 'A simple calculus tool for finding derivatives and integrals.',
+    summary: 'A simple calculus tool for finding derivatives and integrals using MATLAB.',
     githubUrl: 'https://github.com/Ryanline/calculus-tool',
     technologies: [
       { name: 'MATLAB', logo: 'images/logos/matlab-logo.png' },
