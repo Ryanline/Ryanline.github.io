@@ -1,0 +1,139 @@
+<div class="page-shell">
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="Ryan Brooks home">RB</a>
+    <nav class="site-nav" aria-label="Primary">
+      @for (item of navItems; track item.label) {
+        <a [href]="item.href">{{ item.label }}</a>
+      }
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-overlay"></div>
+      <div class="hero-copy">
+        <p class="eyebrow">Portfolio</p>
+        <h1>Ryan Brooks</h1>
+        <p class="hero-subtitle">Full-Stack Software Developer</p>
+        <p class="hero-detail">M.S. Computer Science</p>
+
+        <div class="hero-actions">
+          <a class="button button-primary" href="#projects">View Projects</a>
+          <a class="button button-secondary" href="#resume">Resume</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section projects-section" id="projects">
+      <div class="section-heading">
+        <p class="section-kicker">Selected Work</p>
+        <h2>Projects:</h2>
+      </div>
+
+      <div class="project-grid">
+        @for (project of projects; track project.title) {
+          <article class="project-card">
+            <img class="project-image" [src]="project.image" [alt]="project.title" />
+
+            <div class="project-body">
+              <h3>{{ project.title }}</h3>
+              <p>{{ project.summary }}</p>
+
+              <div class="project-actions">
+                @if (project.liveUrl) {
+                  <a class="button button-soft" [href]="project.liveUrl" target="_blank" rel="noopener">
+                    Live Site
+                  </a>
+                }
+
+                <a class="button button-dark" [href]="project.githubUrl" target="_blank" rel="noopener">
+                  GitHub
+                </a>
+              </div>
+
+              <ul class="tech-list" aria-label="Technologies used">
+                @for (technology of project.technologies; track technology) {
+                  <li>
+                    <img [src]="technology.logo" [alt]="technology.name" [title]="technology.name" />
+                    <span>{{ technology.name }}</span>
+                  </li>
+                }
+              </ul>
+            </div>
+          </article>
+        }
+      </div>
+    </section>
+
+    <section class="content-section resume-section" id="resume">
+      <div class="section-heading">
+        <p class="section-kicker">Background</p>
+        <h2>Resume:</h2>
+      </div>
+
+      <div class="resume-layout">
+        <div class="resume-paper" aria-label="Resume preview">
+          <div class="resume-topline">
+            <div>
+              <h3>Ryan Brooks</h3>
+              <p>M.S. Computer Science Student</p>
+            </div>
+            <p class="resume-contact">Previewing `resume.pdf`</p>
+          </div>
+
+          <iframe
+            class="resume-frame"
+            src="/resume.pdf"
+            title="Ryan Brooks resume PDF preview"
+          ></iframe>
+        </div>
+
+        <aside class="resume-note">
+          <p>
+            Your live resume PDF is now connected to the site. Visitors can preview it here, open
+            it in a new tab, or download it directly.
+          </p>
+
+          <div class="resume-actions">
+            <a class="button button-primary" href="/resume.pdf" target="_blank" rel="noopener">
+              Open PDF
+            </a>
+            <a class="button button-dark" href="/resume.pdf" download>
+              Download PDF
+            </a>
+          </div>
+
+          <section class="resume-block">
+            <h4>Highlights</h4>
+            <ul>
+              @for (item of resumeHighlights.experience; track item) {
+                <li>{{ item }}</li>
+              }
+            </ul>
+          </section>
+
+          <a class="button button-secondary resume-contact-button" href="mailto:brooksryan63@gmail.com">
+            Contact Ryan
+          </a>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="contact">
+    <div>
+      <p class="footer-name">Ryan Brooks</p>
+      <p class="footer-copy">Built with Angular and deployed-ready for GitHub Pages.</p>
+    </div>
+
+    <div class="footer-links">
+      @for (link of socialLinks; track link.label) {
+        <a [href]="link.href" [attr.target]="link.href.startsWith('mailto:') ? null : '_blank'" rel="noopener">
+          {{ link.label }}
+        </a>
+      }
+    </div>
+
+    <p class="footer-year">{{ currentYear }}</p>
+  </footer>
+</div>
