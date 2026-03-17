@@ -33,15 +33,6 @@ import { projects } from './app.data';
               <h3>{{ project.title }}</h3>
               <p>{{ project.summary }}</p>
 
-              <ul class="tech-list" aria-label="Technologies used">
-                @for (technology of project.technologies; track technology.name) {
-                  <li>
-                    <img [src]="technology.logo" [alt]="technology.name" [title]="technology.name" />
-                    <span>{{ technology.name }}</span>
-                  </li>
-                }
-              </ul>
-
               <div class="project-actions">
                 @if (project.liveUrl) {
                   <a class="button button-soft" [href]="project.liveUrl" target="_blank" rel="noopener">
@@ -60,6 +51,15 @@ import { projects } from './app.data';
                   <span>GitHub</span>
                 </a>
               </div>
+
+              <ul class="tech-list" aria-label="Technologies used">
+                @for (technology of project.technologies; track technology.name) {
+                  <li>
+                    <img [src]="technology.logo" [alt]="technology.name" [title]="technology.name" />
+                    <span>{{ technology.name }}</span>
+                  </li>
+                }
+              </ul>
             </div>
           </article>
         }
