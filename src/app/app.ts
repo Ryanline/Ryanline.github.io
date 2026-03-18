@@ -24,6 +24,7 @@ export class App implements OnInit {
     { label: 'Home', route: '/', fragment: undefined },
     { label: 'Projects', route: '/', fragment: 'projects' },
     { label: 'Resume', route: '/resume', fragment: undefined },
+    { label: 'Blog', route: '/blog', fragment: undefined },
     { label: 'About', route: '/about', fragment: undefined },
     { label: 'Contact', route: '/contact', fragment: undefined },
   ];
@@ -62,6 +63,10 @@ export class App implements OnInit {
 
     if (item.label === 'Projects') {
       return this.currentPath === '/' && this.currentHomeSection === 'projects';
+    }
+
+    if (item.label === 'Blog') {
+      return this.currentPath === '/blog';
     }
 
     return this.currentPath === item.route;
