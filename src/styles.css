@@ -537,17 +537,6 @@ select {
   line-height: 1.35;
 }
 
-.blog-article-source {
-  margin: 1rem 0 0;
-}
-
-.blog-article-source a {
-  color: #111111;
-  font-weight: 700;
-  text-decoration: underline;
-  text-underline-offset: 0.18em;
-}
-
 .blog-cover {
   margin-top: 1.5rem;
   overflow: hidden;
@@ -582,6 +571,10 @@ select {
 
 .blog-figure-wrap {
   margin: 1.35rem 0 0.6rem;
+}
+
+.blog-figure-wrap + h2 {
+  margin-top: 1.9rem;
 }
 
 .blog-figure-title {
@@ -623,6 +616,10 @@ select {
 .blog-figure-image img {
   width: 100%;
   height: auto;
+}
+
+.blog-figure-image--compact {
+  max-width: 28rem;
 }
 
 .blog-figure-image figcaption {

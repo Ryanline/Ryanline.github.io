@@ -39,12 +39,6 @@ import { BlogFigure, BlogPost, BlogSection, blogPosts } from './blog.data';
           <h1>{{ activePost().title }}</h1>
           <p class="blog-article-summary">{{ activePost().summary }}</p>
 
-          @if (activePost().sourcePdf) {
-            <p class="blog-article-source">
-              <a [href]="activePost().sourcePdf" target="_blank" rel="noopener">Open original PDF</a>
-            </p>
-          }
-
           @if (activePost().coverImage) {
             <div class="blog-cover">
               <img [src]="activePost().coverImage" alt="" aria-hidden="true" />
@@ -237,7 +231,7 @@ import { BlogFigure, BlogPost, BlogSection, blogPosts } from './blog.data';
                         </div>
                       }
                       @case ('image') {
-                        <figure class="blog-figure blog-figure-image">
+                        <figure class="blog-figure blog-figure-image blog-figure-image--compact">
                           <img [src]="figure.imageSrc" [alt]="figure.imageAlt ?? ''" />
                           @if (figure.caption) {
                             <figcaption>{{ figure.caption }}</figcaption>
@@ -251,7 +245,7 @@ import { BlogFigure, BlogPost, BlogSection, blogPosts } from './blog.data';
                 <h2>{{ section.heading }}</h2>
 
                 @for (paragraph of section.paragraphs; track paragraph; let index = $index) {
-                  <p>{{ paragraph }}</p>
+                  <p [innerHTML]="formatParagraph(paragraph)"></p>
 
                   @for (figure of getSectionFigures(section, index); track figure.title) {
                     <div class="blog-figure-wrap">
@@ -436,7 +430,7 @@ import { BlogFigure, BlogPost, BlogSection, blogPosts } from './blog.data';
                           </div>
                         }
                         @case ('image') {
-                          <figure class="blog-figure blog-figure-image">
+                          <figure class="blog-figure blog-figure-image blog-figure-image--compact">
                             <img [src]="figure.imageSrc" [alt]="figure.imageAlt ?? ''" />
                             @if (figure.caption) {
                               <figcaption>{{ figure.caption }}</figcaption>
@@ -509,5 +503,23 @@ export class BlogPageComponent {
     ];
 
     return replacements.reduce((value, [from, to]) => value.split(from).join(to), text).trim();
+  }
+
+  protected formatParagraph(text: string): string {
+    const cleaned = this.cleanText(text);
+    const italics: Array<[string, string]> = [
+      [
+        'The Architecture of Computer Hardware, Systems Software, and Networking: An Information Technology Approach, 6th Edition',
+        '<em>The Architecture of Computer Hardware, Systems Software, and Networking: An Information Technology Approach, 6th Edition</em>',
+      ],
+      ['A beginner’s guide', '<em>A beginner’s guide</em>'],
+      ['Stories', '<em>Stories</em>'],
+      ['The New York Times', '<em>The New York Times</em>'],
+      ['Scientific American', '<em>Scientific American</em>'],
+      ['GALE ACADEMIC ONEFILE', '<em>GALE ACADEMIC ONEFILE</em>'],
+      ['Amoeba', '<em>Amoeba</em>'],
+    ];
+
+    return italics.reduce((value, [from, to]) => value.split(from).join(to), cleaned);
   }
 }
