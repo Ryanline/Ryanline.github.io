@@ -592,6 +592,8 @@ select {
   font-size: 1.02rem;
   line-height: 1.35;
   color: #161616;
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 .blog-citation-list em {
