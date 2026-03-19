@@ -446,8 +446,6 @@ import { BlogFigure, BlogPost, BlogSection, blogPosts } from './blog.data';
 
             @if (activePost().citations?.length) {
               <section class="blog-citations">
-                <h2>Works Cited</h2>
-
                 <div class="blog-citation-list">
                   @for (citation of activePost().citations!; track citation) {
                     <p [innerHTML]="formatCitation(citation)"></p>
