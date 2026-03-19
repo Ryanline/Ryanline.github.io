@@ -22,6 +22,7 @@ export type BlogPost = {
   coverImage?: string;
   sourcePdf?: string;
   sections: BlogSection[];
+  citations?: string[];
 };
 
 export const blogPosts: BlogPost[] = [
@@ -35,6 +36,32 @@ export const blogPosts: BlogPost[] = [
       'A discussion of cloud computing, including its definition, origin, history, services, and major players, as well as some examples of its successful implementation today.',
     coverImage: '/images/blog/cloud-blog.svg',
     sourcePdf: '/blog/research-project-1.pdf',
+    citations: [
+      'Armstrong, Martin. “Infographic: Netflix Is Responsible for 15% of Global Internet Traffic.” Statista Infographics, 1 Mar. 2023, www.statista.com/chart/15692/distribution-of-global-downstream-traffic/. Accessed 2 Oct. 2024.',
+      '“Azure Updates | Microsoft Azure.” Azure.microsoft.com, azure.microsoft.com/en-us/updates. Accessed 2 Oct. 2024.',
+      'Barr, Jeff. “EC2 Instance History.” Amazon Web Services, 28 May 2015, aws.amazon.com/blogs/aws/ec2-instance-history/. Accessed 2 Oct. 2024.',
+      'Chandler, Robert, and Marc Chalé. “Harnessing the Momentum of Generative AI.” Phalanx, vol. 56, no. 2, 2023, pp. 52–54. JSTOR, https://www.jstor.org/stable/27227084. Accessed 2 Oct. 2024.',
+      '“Conversation with Eric Schmidt hosted by Danny Sullivan, Search Engine Strategies Conference.” Www.google.com, www.google.com/press/podium/ses2006.html. Accessed 2 Oct. 2024.',
+      'Coveney, Peter V. “Scientific Grid Computing.” Philosophical Transactions: Mathematical, Physical and Engineering Sciences, vol. 363, no. 1833, 2005, pp. 1707–13. JSTOR, http://www.jstor.org/stable/30039684. Accessed 2 Oct. 2024.',
+      'Darpa.mil, 2021, www.darpa.mil/about-us/timeline/ipto. Accessed 2 Oct. 2024.',
+      'Denning, Peter J. “The Science of Computing: The ARPANET after Twenty Years.” American Scientist, vol. 77, no. 6, 1989, pp. 530–34. JSTOR, http://www.jstor.org/stable/27856002. Accessed 2 Oct. 2024.',
+      'Englander, Irv, and Wilson Wong. The Architecture of Computer Hardware, Systems Software, and Networking: An Information Technology Approach, 6th Edition, edited by Jennifer Manias, Lise Johnson, 2021. Accessed 2 Oct. 2024.',
+      'Fano, R. M., and F. J. Corbató. “TIME-SHARING ON COMPUTERS.” Scientific American, vol. 215, no. 3, 1966, pp. 128–43. JSTOR, http://www.jstor.org/stable/24931051. Accessed 2 Oct. 2024.',
+      `Foster, I., and C. Kesselman. "The Globus project: a status report," Proceedings Seventh Heterogeneous Computing Workshop (HCW'98), Orlando, FL, USA, 1998, pp. 4-18, doi: 10.1109/HCW.1998.666541. Accessed 2 Oct. 2024.`,
+      'Foster, Ian. “THE GRID: Computing without Bounds.” Scientific American, vol. 288, no. 4, 2003, pp. 78–85. JSTOR, http://www.jstor.org/stable/26060247. Accessed 2 Oct. 2024.',
+      'GLOBUS. Home. Accessed 2 Oct. 2024.',
+      'Hafner, Katie. “Lawrence Roberts, Who Helped Design Internet’s Precursor, Dies at 81.” The New York Times, 30 Dec. 2018, www.nytimes.com/2018/12/30/obituaries/lawrence-g-roberts-dies-at-81.html.',
+      'Head, Lauren Lawley. “Companies Selling Software as Service.” GALE ACADEMIC ONEFILE, American City Business Journals, Inc., go-gale-com.mutex.gmu.edu/ps/i.do?id=GALE%7CA55777629&sid=googleScholar&v=2.1&it=r&linkaccess=abs&issn=10968636&p=AONE&sw=w&aty=ip&enforceAuth=true&linkSource=delayedAuthFullText&oweAuth=true&userGroupName=viva_gmu&u=viva_gmu. Accessed 2 Oct. 2024.',
+      'Microsoft. “The Coca-Cola Company and Microsoft Announce Five-Year Strategic Partnership to Accelerate Cloud and Generative AI Initiatives.” Stories, 23 Apr. 2024, news.microsoft.com/2024/04/23/the-coca-cola-company-and-microsoft-announce-five-year-strategic-partnership-to-accelerate-cloud-and-generative-ai-initiatives/. Accessed 2 Oct. 2024.',
+      'Microsoft. “What Is Cloud Computing? A Beginner’s Guide | Microsoft Azure.” Azure.microsoft.com, 2023, azure.microsoft.com/en-us/resources/cloud-computing-dictionary/what-is-cloud-computing. Accessed 2 Oct. 2024.',
+      'OpenAI. “About OpenAI.” OpenAI, OpenAI, 2023, openai.com/about/. Accessed 2 Oct. 2024.',
+      'Pelkey, James L. “Chapter 4 - Networking: Vision and Packet Switching 1959 - 1968.” The History Of Computer Communications, 2021. Accessed 2 Oct. 2024.',
+      'Regalado, Antonio. “Who Coined ‘Cloud Computing’?” MIT Technology Review, 31 Oct. 2011, www.technologyreview.com/2011/10/31/257406/who-coined-cloud-computing/. Accessed 2 Oct. 2024.',
+      'Susarla, Anjana, et al. “A Transaction Cost Perspective of the ‘Software as a Service’ Business Model.” Journal of Management Information Systems, vol. 26, no. 2, 2009, pp. 205–40. JSTOR, http://www.jstor.org/stable/40398986. Accessed 2 Oct. 2024.',
+      'Tanenbaum, Andrew S., and Sape J. Mullender. “An Overview of the Amoeba Distributed Operating System.” ACM SIGOPS Operating Systems Review, vol. 15, no. 3, 1 July 1981, pp. 51–64, https://doi.org/10.1145/1041500.1041502. Accessed 2 Oct. 2024.',
+      '“Time-Sharing.” IBM, www.ibm.com/history/time-sharing. Accessed 2 Oct. 2024.',
+      'van Steen, Maarten, and Andrew S. Tanenbaum. “Introduction.” Distributed Systems, Maarten van Steen, 2017, 2. Accessed 2 Oct. 2024.',
+    ],
     sections: [
       {
         heading: 'Introduction',

@@ -569,6 +569,35 @@ select {
   font-size: 1.02rem;
 }
 
+.blog-citations {
+  max-width: 50rem;
+  margin-top: 3rem;
+  padding-top: 1.25rem;
+}
+
+.blog-citations h2 {
+  margin: 0 0 1.25rem;
+  font-size: 1.45rem;
+  letter-spacing: -0.03em;
+}
+
+.blog-citation-list {
+  font-family: Georgia, 'Times New Roman', serif;
+}
+
+.blog-citation-list p {
+  margin: 0 0 1.1rem;
+  padding-left: 3.2rem;
+  text-indent: -3.2rem;
+  font-size: 1.02rem;
+  line-height: 1.35;
+  color: #161616;
+}
+
+.blog-citation-list em {
+  font-style: italic;
+}
+
 .blog-figure-wrap {
   margin: 1.35rem 0 0.6rem;
 }

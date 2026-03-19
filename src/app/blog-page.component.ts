@@ -443,6 +443,18 @@ import { BlogFigure, BlogPost, BlogSection, blogPosts } from './blog.data';
                 }
               </section>
             }
+
+            @if (activePost().citations?.length) {
+              <section class="blog-citations">
+                <h2>Works Cited</h2>
+
+                <div class="blog-citation-list">
+                  @for (citation of activePost().citations!; track citation) {
+                    <p [innerHTML]="formatCitation(citation)"></p>
+                  }
+                </div>
+              </section>
+            }
           </div>
         </article>
       </div>
@@ -480,6 +492,7 @@ export class BlogPageComponent {
           caption: figure.caption ? this.cleanText(figure.caption) : figure.caption,
         })),
       })),
+      citations: post.citations?.map((citation) => this.cleanText(citation)),
     };
   }
 
@@ -518,6 +531,36 @@ export class BlogPageComponent {
       ['Scientific American', '<em>Scientific American</em>'],
       ['GALE ACADEMIC ONEFILE', '<em>GALE ACADEMIC ONEFILE</em>'],
       ['Amoeba', '<em>Amoeba</em>'],
+    ];
+
+    return italics.reduce((value, [from, to]) => value.split(from).join(to), cleaned);
+  }
+
+  protected formatCitation(text: string): string {
+    const cleaned = this.cleanText(text);
+    const italics: Array<[string, string]> = [
+      ['Statista Infographics', '<em>Statista Infographics</em>'],
+      ['Azure.microsoft.com', '<em>Azure.microsoft.com</em>'],
+      ['Amazon Web Services', '<em>Amazon Web Services</em>'],
+      ['Phalanx', '<em>Phalanx</em>'],
+      ['Www.google.com', '<em>Www.google.com</em>'],
+      ['Philosophical Transactions: Mathematical, Physical and Engineering Sciences', '<em>Philosophical Transactions: Mathematical, Physical and Engineering Sciences</em>'],
+      ['Darpa.mil', '<em>Darpa.mil</em>'],
+      ['American Scientist', '<em>American Scientist</em>'],
+      ['The Architecture of Computer Hardware, Systems Software, and Networking: An Information Technology Approach, 6th Edition', '<em>The Architecture of Computer Hardware, Systems Software, and Networking: An Information Technology Approach, 6th Edition</em>'],
+      ['Scientific American', '<em>Scientific American</em>'],
+      [`Proceedings Seventh Heterogeneous Computing Workshop (HCW'98)`, `<em>Proceedings Seventh Heterogeneous Computing Workshop (HCW'98)</em>`],
+      ['GLOBUS', '<em>GLOBUS</em>'],
+      ['The New York Times', '<em>The New York Times</em>'],
+      ['GALE ACADEMIC ONEFILE', '<em>GALE ACADEMIC ONEFILE</em>'],
+      ['Stories', '<em>Stories</em>'],
+      ['OpenAI', '<em>OpenAI</em>'],
+      ['The History Of Computer Communications', '<em>The History Of Computer Communications</em>'],
+      ['MIT Technology Review', '<em>MIT Technology Review</em>'],
+      ['Journal of Management Information Systems', '<em>Journal of Management Information Systems</em>'],
+      ['ACM SIGOPS Operating Systems Review', '<em>ACM SIGOPS Operating Systems Review</em>'],
+      ['IBM', '<em>IBM</em>'],
+      ['Distributed Systems', '<em>Distributed Systems</em>'],
     ];
 
     return italics.reduce((value, [from, to]) => value.split(from).join(to), cleaned);
